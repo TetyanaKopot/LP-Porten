@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  &__input {
+    width: 210px;
+    height: 42px;
+    color: var(--color-white);
+    opacity: 0.4;
+    padding: 0.8rem;
+  }
+}

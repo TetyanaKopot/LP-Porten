@@ -1,0 +1,109 @@
+.presentation {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+
+  @media screen and (min-width: 1440px) {
+    flex-wrap: nowrap;
+  }
+
+  &__last {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0;
+
+    @media screen and (min-width: 1440px) {
+      width: 54%;
+    }
+    @media screen and (min-width: 1920px) {
+      margin: 93px 0;
+    }
+
+    &-title {
+      &::after {
+        margin: 30px auto;
+
+        @media screen and (min-width: 768px) {
+          margin: 40px auto;
+        }
+        @media screen and (min-width: 1440px) {
+          margin: 50px auto;
+        }
+      }
+    }
+
+    &-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      @media screen and (min-width: 1440px) {
+        gap: 2rem;
+      }
+      @media screen and (min-width: 1920px) {
+        gap: 3.125rem;
+      }
+    }
+  }
+
+  &__new {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/man-in-chear.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    opacity: 0.5;
+
+    @media screen and (min-width: 768px) {
+      height: 600px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 46%;
+      height: 650px;
+    }
+    @media screen and (min-width: 1920px) {
+      height: 730px;
+    }
+
+    &-content {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media screen and (min-width: 768px) {
+        bottom: 100px;
+      }
+
+      &--title {
+        &::after {
+          margin: 15px auto;
+
+          @media screen and (min-width: 768px) {
+            margin: 30px auto;
+          }
+        }
+      }
+
+      &--button {
+        margin: 0 auto;
+      }
+    }
+  }
+}

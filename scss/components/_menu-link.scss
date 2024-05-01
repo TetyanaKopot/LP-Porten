@@ -1,0 +1,11 @@
+.menu-link {
+  padding: 1.85rem 1rem;
+  color: var(--color-gray);
+  transition: linear 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--color-black-accent);
+    color: var(--color-white);
+  }
+}

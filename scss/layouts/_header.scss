@@ -1,0 +1,86 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  color: var(--color-gray);
+
+  &__first-line {
+    height: 24px;
+    font-size: 0.5rem;
+    background-color: var(--color-black);
+
+    @media screen and (min-width: 768px) {
+      height: 44px;
+      font-size: 0.75rem;
+    }
+
+    &--container,
+    &--contacts,
+    &--login {
+      display: flex;
+    }
+
+    &--container {
+      justify-content: space-between;
+    }
+
+    &--contacts,
+    &--login {
+      align-items: center;
+    }
+    &--contacts {
+      &-phone {
+        text-decoration: none;
+        color: var(--color-gray);
+        margin: 0 0.2rem;
+
+        @media screen and (min-width: 768px) {
+          margin: 0 0.5rem;
+        }
+      }
+      &-text {
+        border-left: 1px solid var(--color-gray);
+        padding-left: 0.2rem;
+        margin-right: 0.2rem;
+
+        @media screen and (min-width: 768px) {
+          padding-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &__second-line {
+    text-transform: uppercase;
+    height: 56px;
+    background-color: var(--color-black-background);
+
+    @media screen and (min-width: 768px) {
+      height: 80px;
+    }
+
+    &--container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &--nav {
+      display: flex;
+      height: 100%;
+    }
+
+    &--menu {
+      display: none;
+      align-items: center;
+      font-size: 0.875rem;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
+    }
+  }
+}

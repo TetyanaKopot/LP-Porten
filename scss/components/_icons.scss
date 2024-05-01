@@ -1,0 +1,38 @@
+.icon {
+  &-phone-outline,
+  &-log-in {
+    fill: var(--color-gray);
+  }
+
+  &-phone-outline {
+    width: 16px;
+    height: 16px;
+  }
+
+  &-log-in {
+    width: 14px;
+    height: 14px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 1rem;
+    }
+  }
+
+  &-cart,
+  &-search {
+    width: 22px;
+    height: 22px;
+    fill: var(--color-white);
+    transition: linear 0.3s;
+
+    &:hover {
+      scale: 1.5;
+    }
+  }
+  &-menu,
+  &-clear {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-white);
+  }
+}

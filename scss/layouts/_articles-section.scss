@@ -1,0 +1,18 @@
+.articles-section {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    &::after {
+      margin: 1.25rem auto;
+
+      @media screen and (min-width: 768px) {
+        margin: 2.25rem auto;
+      }
+    }
+  }
+}

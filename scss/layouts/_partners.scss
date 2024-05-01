@@ -1,0 +1,49 @@
+.partners {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 113px;
+
+  &__title {
+    margin-bottom: 0;
+
+    &::after {
+      margin: 1.5rem auto;
+
+      @media screen and (min-width: 768px) {
+        margin: 2.5rem auto;
+      }
+    }
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
+    gap: 4rem;
+    width: 60%;
+
+    @media screen and (min-width: 375px) {
+      padding: 0 60px;
+      gap: 6rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+      width: 80%;
+    }
+    @media screen and (min-width: 1920px) {
+      width: 100%;
+      flex-wrap: nowrap;
+      gap: 2rem;
+    }
+
+    &-item {
+      @media screen and (max-width: 768px) {
+        width: 300px;
+      }
+    }
+  }
+}
