@@ -5,6 +5,8 @@
 ::after,
 ::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -16,7 +18,7 @@ body {
   font-family: "PT Sans", sans-serif;
   color: var(--color-white);
   background-color: var(--color-black);
-  margin: 0;
+  margin: 0 auto;
 }
 
 ul {
@@ -186,28 +188,14 @@ p {
 
 .watch-card {
   width: 208px;
-  height: 324px;
   transition: linear 0.3s;
 }
 .watch-card:hover {
   scale: 1.1;
 }
-@media screen and (min-width: 1024px) {
-  .watch-card {
-    width: 260px;
-    height: 405px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .watch-card {
-    width: 208px;
-    height: 324px;
-  }
-}
 @media screen and (min-width: 1920px) {
   .watch-card {
     width: 260px;
-    height: 405px;
   }
 }
 .watch-card__image-area {
@@ -219,16 +207,6 @@ p {
   background-color: var(--color-light-black);
   padding: 20px;
   margin-bottom: 1.5625rem;
-}
-@media screen and (min-width: 1024px) {
-  .watch-card__image-area {
-    height: 325px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .watch-card__image-area {
-    height: 260px;
-  }
 }
 @media screen and (min-width: 1920px) {
   .watch-card__image-area {
@@ -297,6 +275,9 @@ p {
 .last-card.free .last-card__price {
   display: block;
 }
+.last-card.free .last-card__image-area--image {
+  opacity: 1;
+}
 
 .form {
   display: flex;
@@ -305,8 +286,11 @@ p {
   width: 210px;
   height: 42px;
   color: var(--color-white);
-  opacity: 0.4;
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 0.8rem;
+}
+.form__input:focus {
+  outline: none;
 }
 
 .icon-phone-outline, .icon-log-in {
@@ -504,6 +488,7 @@ p {
 }
 
 .footer {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -511,14 +496,20 @@ p {
   background-image: url(../images/footer-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.5;
   background-size: cover;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .footer__container {
   margin-top: 3rem;
   width: 80%;
-  display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
@@ -539,8 +530,10 @@ p {
   }
 }
 .footer__about, .footer__categories, .footer__newsletter {
+  position: relative;
   width: 100%;
   margin-bottom: 4rem;
+  z-index: 1;
 }
 @media screen and (min-width: 1440px) {
   .footer__about, .footer__categories, .footer__newsletter {
@@ -549,7 +542,7 @@ p {
 }
 @media screen and (min-width: 1920px) {
   .footer__about, .footer__categories, .footer__newsletter {
-    width: calc((100% - 2rem) / 3);
+    width: calc((100% - 3rem) / 3);
   }
 }
 .footer__about--text, .footer__newsletter--text {
@@ -567,9 +560,9 @@ p {
 .header {
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 10;
   width: 100%;
+  max-width: 1920px;
   color: var(--color-gray);
 }
 .header__first-line {
@@ -652,8 +645,16 @@ p {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
   margin-bottom: 80px;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 768px) {
   .hero-section {
@@ -825,8 +826,7 @@ p {
 }
 .mobile-menu__main--content {
   bottom: -400px;
-  text-align: left;
-  left: 42%;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .mobile-menu__main--content {
@@ -950,16 +950,14 @@ p {
     margin: 2.5rem auto;
   }
 }
-.new-arrivals__cards,
-.new-arrivals .more-cards {
+.new-arrivals__cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2.5rem 1.44rem;
   margin-bottom: 2rem;
 }
-.new-arrivals__cards.is-hidden,
-.new-arrivals .more-cards.is-hidden {
+.new-arrivals__cards.is-hidden {
   display: none;
   opacity: 0;
   visibility: hidden;
@@ -1042,11 +1040,6 @@ p {
     width: 54%;
   }
 }
-@media screen and (min-width: 1920px) {
-  .presentation__last {
-    margin: 93px 0;
-  }
-}
 .presentation__last-title::after {
   margin: 30px auto;
 }
@@ -1090,7 +1083,15 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  opacity: 0.5;
+}
+.presentation__new::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 768px) {
   .presentation__new {
@@ -1100,11 +1101,6 @@ p {
 @media screen and (min-width: 1440px) {
   .presentation__new {
     width: 46%;
-    height: 650px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .presentation__new {
     height: 730px;
   }
 }
