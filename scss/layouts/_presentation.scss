@@ -106,6 +106,13 @@
 
       &--button {
         margin: 0 auto;
+
+        & > a {
+          color: var(--color-white);
+          &:hover {
+            color: var(--color-black);
+          }
+        }
       }
     }
   }

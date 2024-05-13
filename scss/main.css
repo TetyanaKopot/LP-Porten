@@ -120,7 +120,7 @@ p {
   background-color: transparent;
   border: 1px solid var(--color-white);
   cursor: pointer;
-  transition: linear 0.3s;
+  transition: linear 0.5s;
 }
 @media screen and (min-width: 768px) {
   .button {
@@ -186,6 +186,23 @@ p {
   }
 }
 
+.more-cards-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 120px;
+}
+.more-cards-btn.free {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .more-cards-btn {
+    width: 186px;
+  }
+}
+
 .watch-card {
   width: 208px;
   transition: linear 0.3s;
@@ -205,6 +222,7 @@ p {
   }
 }
 .watch-card__image-area {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,24 +240,10 @@ p {
 }
 .watch-card__image-area--image {
   width: 80%;
-  height: 80%;
-}
-@media screen and (min-width: 1024px) {
-  .watch-card__image-area--image {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .watch-card__image-area--image {
-    width: 80%;
-    height: 80%;
-  }
 }
 @media screen and (min-width: 1920px) {
   .watch-card__image-area--image {
     width: 100%;
-    height: 100%;
   }
 }
 .watch-card__name, .watch-card__price {
@@ -250,39 +254,17 @@ p {
   font-size: 1.125rem;
 }
 
-.last-card__image-area {
-  position: relative;
-}
-.last-card__image-area--image, .last-card__image-area--button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.last-card__image-area--image {
+.last-card .watch-card__image-area--image {
   opacity: 0.5;
 }
-.last-card__image-area--button {
-  display: block;
-  width: 120px;
-}
-.last-card__image-area--button.free {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .last-card__image-area--button {
-    width: 186px;
-  }
-}
-.last-card__name, .last-card__price {
-  display: none;
-}
-.last-card.free .last-card__name,
-.last-card.free .last-card__price {
-  display: block;
-}
-.last-card.free .last-card__image-area--image {
+.last-card .watch-card__image-area--image.free {
   opacity: 1;
+}
+.last-card .watch-card__name, .last-card .watch-card__price {
+  display: none;
+}
+.last-card .watch-card__name.free, .last-card .watch-card__price.free {
+  display: block;
 }
 
 .form {
@@ -1129,6 +1111,12 @@ p {
 }
 .presentation__new-content--button {
   margin: 0 auto;
+}
+.presentation__new-content--button > a {
+  color: var(--color-white);
+}
+.presentation__new-content--button > a:hover {
+  color: var(--color-black);
 }
 
 :root {

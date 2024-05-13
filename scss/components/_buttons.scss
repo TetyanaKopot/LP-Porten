@@ -6,7 +6,7 @@
   background-color: transparent;
   border: 1px solid var(--color-white);
   cursor: pointer;
-  transition: linear 0.3s;
+  transition: linear 0.5s;
 
   @media screen and (min-width: 768px) {
     font-size: 1.125rem;
@@ -70,5 +70,21 @@
 
   @media screen and (min-width: 768px) {
     display: none;
+  }
+}
+
+.more-cards-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 120px;
+  &.free {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 186px;
   }
 }
