@@ -37,14 +37,22 @@
     text-transform: lowercase;
   }
 
-  &__order {
-    width: 150px;
+  &__order,
+  &__return {
     margin: 3rem auto;
     display: block;
 
     &.none {
       display: none;
     }
+  }
+
+  &__order {
+    width: 150px;
+    margin-top: 0;
+  }
+  &__return {
+    width: 250px;
   }
 }
 
@@ -85,12 +93,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
-    border: 1.5px solid var(--color-white);
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     padding: 0.4rem;
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+    @media screen and (min-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
 
     &.none {
       display: none;

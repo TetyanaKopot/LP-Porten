@@ -148,13 +148,19 @@ p {
 .button-categories {
   text-transform: lowercase;
 }
-.button__order {
-  width: 150px;
+.button__order, .button__return {
   margin: 3rem auto;
   display: block;
 }
-.button__order.none {
+.button__order.none, .button__return.none {
   display: none;
+}
+.button__order {
+  width: 150px;
+  margin-top: 0;
+}
+.button__return {
+  width: 250px;
 }
 
 .button-login,
@@ -196,12 +202,18 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
-  border: 1.5px solid var(--color-white);
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   padding: 0.4rem;
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+@media screen and (min-width: 768px) {
+  .button-cart__sign {
+    width: 20px;
+    height: 20px;
+  }
 }
 .button-cart__sign.none {
   display: none;
@@ -411,7 +423,7 @@ p {
 .cart {
   width: 100%;
   position: absolute;
-  top: 124px;
+  top: 80px;
   right: 0;
   z-index: 1;
   background-color: var(--color-black);
@@ -422,6 +434,7 @@ p {
 }
 @media screen and (min-width: 768px) {
   .cart {
+    top: 124px;
     width: 650px;
   }
 }
@@ -434,10 +447,11 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  padding: 1rem;
 }
 .cart__header-title {
   display: block;
-  margin: 0 auto;
+  margin: 1rem;
 }
 .cart__header-title.none {
   display: none;

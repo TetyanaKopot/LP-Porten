@@ -11,6 +11,7 @@ const cartSign = document.querySelector('.button-cart__sign')
 const totalWrapper = document.querySelector('.cart-card__total-wrapper')
 const total = document.querySelector('.cart-card__total-wrapper--total')
 const orderButton = document.querySelector('.button__order')
+const returnButton = document.querySelector('.button__return')
 
 export const addToOrder = (elem) => {
   const cardActions = document.createElement('div')
@@ -33,6 +34,7 @@ export const addToOrder = (elem) => {
   quantity.addEventListener('change', getCurrentTotal)
   totalWrapper.classList.remove('none')
   cartSign.classList.remove('none')
+  returnButton.classList.remove('none')
   orderButton.classList.remove('none')
 
   const subtract = (event) => {
@@ -45,6 +47,7 @@ export const addToOrder = (elem) => {
       cartTitle.classList.remove('none')
       totalWrapper.classList.add('none')
       cartSign.classList.add('none')
+      returnButton.classList.add('none')
       orderButton.classList.add('none')
     }
     getCurrentTotal()
@@ -106,7 +109,8 @@ export const addToOrder = (elem) => {
       cartTitle.classList.remove('none'),
       totalWrapper.classList.add('none'),
       cartSign.classList.add('none'),
-      orderButton.classList.add('none')
+      returnButton.classList.add('none')
+    orderButton.classList.add('none')
   }
   orderButton.addEventListener('click', orderProducts, closeCart)
 }
