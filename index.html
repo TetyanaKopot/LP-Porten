@@ -78,11 +78,6 @@
               </button>
               <div class="logo">PORTEN</div>
               <div class="mobile-menu__header-options">
-                <button class="mobile-menu__header-options--button button-cart">
-                  <svg class="icon icon-cart">
-                    <use xlink:href="./images/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
                 <button
                   class="mobile-menu__header-options--button button-search"
                 >
@@ -157,6 +152,7 @@
               <svg class="icon icon-cart">
                 <use xlink:href="./images/sprite.svg#icon-cart"></use>
               </svg>
+              <span class="button-cart__sign none"></span>
             </button>
             <button class="button-search">
               <svg class="icon icon-search">
@@ -494,11 +490,30 @@
         </form>
       </div>
     </div>
+    <div class="cart close">
+      <div class="cart__header">
+        <h2 class="cart__header-title"></h2>
+        <button class="cart__header-btn cart-btn-close" type="button">
+          <svg class="icon icon-clear">
+            <use xlink:href="./images/sprite.svg#icon-clear"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="cart__container"></ul>
+      <div class="cart-card__total-wrapper none">
+        <h3 class="cart-card__total-wrapper--title">Сума:</h3>
+        <span class="cart-card__total-wrapper--total"></span>
+      </div>
+      <button class="button__order button none">ЗАМОВИТИ</button>
+    </div>
 
+    <script src="app.js/cards/create-cards.mjs" type="module"></script>
+    <script src="app.js/cards/more-cards-button.mjs" type="module"></script>
+    <script src="app.js/cart/add-cards.mjs" type="module"></script>
+    <script src="app.js/cart/open-close-cart.mjs" type="module"></script>
     <script src="app.js/mobile-menu.js"></script>
     <script src="app.js/modal-login.js"></script>
-    <script src="app.js/cards.js" type="module"></script>
-    <script src="app.js/products.js" type="module"></script>
+    <script src="app.js/products.mjs" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

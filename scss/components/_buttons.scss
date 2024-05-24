@@ -36,6 +36,16 @@
   &-categories {
     text-transform: lowercase;
   }
+
+  &__order {
+    width: 150px;
+    margin: 3rem auto;
+    display: block;
+
+    &.none {
+      display: none;
+    }
+  }
 }
 
 .button-login,
@@ -43,7 +53,8 @@
 .button-search,
 .menu-btn-open,
 .menu-btn-close,
-.modal-btn-close {
+.modal-btn-close,
+.cart-btn-close {
   padding: 0;
   border: none;
   background-color: transparent;
@@ -63,6 +74,28 @@
 .button-cart,
 .button-search {
   margin-left: 1.5rem;
+}
+
+.button-cart {
+  position: relative;
+  &__sign {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--color-white);
+    border-radius: 50%;
+    padding: 0.4rem;
+    color: var(--color-white);
+
+    &.none {
+      display: none;
+    }
+  }
 }
 
 .menu-btn-open {
