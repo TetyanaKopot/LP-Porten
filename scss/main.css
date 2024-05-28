@@ -30,6 +30,10 @@ ul {
 a {
   display: inline-block;
   text-decoration: none;
+  color: var(--color-white);
+}
+a:hover {
+  color: var(--color-black);
 }
 
 h1,
